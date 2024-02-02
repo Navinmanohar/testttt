@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header{
+      color: green;
+      background-color: yellow;
+    }
+    .test{
+      color: red;
+      background-color: green;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h1 class="header">Hello ,this is Dom 0</h1>
+  <h1 class="dummy">Hello ,this is Dom 1</h1>
+  <h1>Hello ,this is Dom 2</h1>
+  <h1>Hello ,this is Dom 3 </h1>
+
+  <label for="name">Name :</label>
+  <input type="text" id="name"><br><br>
+
+  <button type="submit" id="button">Click her to see the output</button>
+
+  <script >
+
+    //  let head=document.getElementsByTagName("h1")
+    //  console.log(head[2])
+// let head_by_id=document.getElementById("header")
+//   console.log(head_by_id)
+// let get_By_class=document.getElementsByClassName("dummy")
+// console.log(get_By_class[0])
+
+// let Get_by_querry=document.querySelector("#header")
+// console.log(Get_by_querry)
+
+
+
+
+
+
+// let dummy=document.querySelector(".header")
+    
+// dummy.addEventListener('click',()=>{
+//   // dummy.innerHTML='<p>Hello this is clickecked</p>'
+//   dummy.classList.toggle('test')
+// })
+let btn=document.querySelector("#button")
+let input_by_id=document.querySelector('#name')
+let val;
+input_by_id.addEventListener('input',(event)=>{
+ 
+  val=input_by_id.value;
+  console.log(input_by_id.value)
+})
+
+btn.addEventListener("click",()=>{
+  let heading=document.querySelector('.dummy')
+  heading.innerText=val;
+})
+
+
+  </script>
+</body>
+</html>
